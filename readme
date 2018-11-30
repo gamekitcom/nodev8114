@@ -1,0 +1,8 @@
+budowanie obrazu: 
+
+docker build -t nodev8114 ./
+
+
+zbudowanie frontu: 
+
+docker run -v `pwd`/:/workdir nodev8114 gulp --production
