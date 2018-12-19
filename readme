@@ -5,4 +5,4 @@ docker build -t nodev8114 ./
 
 zbudowanie frontu: 
 
-docker run -v `pwd`/:/workdir nodev8114 gulp --production
+docker run -v `pwd`/:/workdir --rm nodev8114 gulp --production
