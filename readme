@@ -1,8 +1,12 @@
-budowanie obrazu: 
-
+1. budowanie obrazu: 
 docker build -t nodev8114 ./
 
+2. koniecznie przed budowaniem należy zaintstalować zależności, w katalogu aplikacji
+docker run -v `pwd`/:/workdir --rm nodev8114 npm install
 
-zbudowanie frontu: 
-
+3. zbudowanie frontu: 
+a) produkcyjne:
 docker run -v `pwd`/:/workdir --rm nodev8114 gulp --production
+
+b) devowe: 
+docker run -v `pwd`/:/workdir --rm nodev8114 gulp
